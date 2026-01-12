@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Master - Linh Kiện Gaming Cao Cấp</title>
+    <style>
+        /* CSS Tổng thể */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header & Navigation */
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .header h1 a:hover {
+            color: #3498db;
+        }
+
+        .nav-menu {
+            background: #0f3460;
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .nav-menu a {
+            color: white;
+            margin: 0 15px;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #e94560;
+        }
+
+        /* Grid hệ thống 4 sản phẩm */
+        .product-grid {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 0 20px 50px;
+        }
+
+        /* Thẻ sản phẩm */
+        .card {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #eaeaea;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+            border-color: #3498db;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            box-sizing: border-box;
+            background: #fff;
+        }
+
+        .card-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .card-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .category {
+            font-size: 11px;
+            color: #3498db;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 0 15px 0;
+            height: 42px;
+            overflow: hidden;display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .title a:hover {
+            color: #3498db;
+        }
+
+        .price {
+            font-size: 20px;
+            color: #d63031;
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-top: auto;
+        }
+
+        .buy-btn {
+            background-color: #1a1a2e;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .buy-btn:hover {
+            background-color: #e94560;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1><a href="index.html">PC MASTER STORE</a></h1>
+        <p>Linh kiện máy tính & Phụ kiện PC chính hãng</p>
+    </header>
+
+    <nav class="nav-menu">
+        <a href="index.html">Trang chủ</a>
+        <a href="#vga">Card đồ họa</a>
+        <a href="#cpu">Vi xử lý</a>
+        <a href="#contact">Liên hệ</a>
+    </nav>
+
+    <main class="product-grid">
+        <div class="card">
+            <a href="product-detail-1.html" class="card-image">
+                <img src="https://via.placeholder.com/300x200?text=RTX+4080+Super" alt="VGA">
+            </a>
+            <div class="card-content">
+                <span class="category">Card Đồ Họa</span>
+                <h3 class="title"><a href="product-detail-1.html">Gigabyte GeForce RTX 4080 SUPER OC 16GB</a></h3>
+                <div class="price">32.500.000₫</div>
+                <a href="cart.html" class="buy-btn">Thêm vào giỏ</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="product-detail-2.html" class="card-image">
+                <img src="https://via.placeholder.com/300x200?text=Core+i7+14700K" alt="CPU">
+            </a>
+            <div class="card-content">
+                <span class="category">Vi xử lý</span>
+                <h3 class="title"><a href="product-detail-2.html">Intel Core i7-14700K (Up to 5.6GHz, 20 Nhân 28 Luồng)</a></h3>
+                <div class="price">11.200.000₫</div>
+                <a href="cart.html" class="buy-btn">Thêm vào giỏ</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="product-detail-3.html" class="card-image">
+                <img src="https://via.placeholder.com/300x200?text=Z790+Aorus+Elite" alt="Mainboard">
+            </a>
+            <div class="card-content">
+                <span class="category">Bo mạch chủ</span>
+                <h3 class="title"><a href="product-detail-3.html">Mainboard GIGABYTE Z790 AORUS ELITE AX</a></h3>
+                <div class="price">7.890.000₫</div>
+                <a href="cart.html" class="buy-btn">Thêm vào giỏ</a>
+            </div>
+        </div>
+
+        <div class="card"><a href="product-detail-4.html" class="card-image">
+                <img src="https://via.placeholder.com/300x200?text=990+Pro+1TB" alt="SSD">
+            </a>
+            <div class="card-content">
+                <span class="category">Ổ cứng SSD</span>
+                <h3 class="title"><a href="product-detail-4.html">Samsung 990 Pro PCIe Gen4 x4 NVMe 1TB M.2</a></h3>
+                <div class="price">2.950.000₫</div>
+                <a href="cart.html" class="buy-btn">Thêm vào giỏ</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
