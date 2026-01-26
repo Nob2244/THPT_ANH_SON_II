@@ -1,244 +1,86 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="style.css">
-<title>Câu lạc bộ ngoại khóa - THPT Anh Sơn II</title>
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-    background:#f5f5f5;
-    color:#111;
-}
-
-/* HEADER */
-header{
-    background:#fff;
-    border-bottom:3px solid #c4161c;
-    padding:20px;
-}
-header h1{
-    color:#c4161c;
-    font-size:36px;
-    font-weight:800;
-}
-header p{
-    margin-top:6px;
-    font-size:14px;
-    color:#555;
-}
-
-/* MAIN */
-main{
-    max-width:1100px;
-    margin:30px auto;
-    padding:0 20px;
-}
-
-/* GRID 2 CỘT */
-.clb-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-}
-
-/* ITEM */
-.clb-item{
-    background:#fff;
-    display:flex;
-    gap:16px;
-    padding:16px;
-    border-bottom:1px solid #ddd;
-}
-
-/* IMAGE */
-.clb-item img{
-    width:120px;
-    height:80px;
-    object-fit:cover;
-}
-
-/* TEXT */
-.clb-text h2{
-    font-size:20px;
-    margin-bottom:6px;
-}
-
-/* LINK TÊN CLB
-   - Thẻ <a> bao quanh tiêu đề
-   - Dùng pseudo-class minh họa */
-.clb-text a{
-    text-decoration:none;
-    color:#111;
-}
-.clb-text a:hover{
-    color:#c4161c;
-    text-decoration:underline;
-}
-.clb-text a:visited{
-    color:#555;
-}
-.clb-text a:active{
-    color:#000;
-}
-
-.clb-text p{
-    font-size:14px;
-    color:#444;
-    line-height:1.5;
-}
-
-/* RESPONSIVE */
-@media(max-width:800px){
-    .clb-grid{
-        grid-template-columns:1fr;
-    }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Câu Lạc Bộ Trường Học</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <header>
+        <a href="index.html" class="logo">SCHOOL CLUBS</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="#">Sự kiện</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <header>
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
-    <div class="logo">Trường THPT Anh Sơn II</div>
+    <section class="hero">
+        <h1>Khám Phá Đam Mê Của Bạn</h1>
+        <p>Kết nối, học hỏi và phát triển cùng cộng đồng sinh viên năng động</p>
+    </section>
 
-    <div class="search-box">
-        <input type="text" placeholder="Tìm kiếm...">
-    </div>
-
-    <a href="#" class="login-btn">Đăng nhập</a>
-</header>
-
-<nav id="menu">
-    <a href="index.html">Trang chủ</a>
-    <a href="clb-tinhoc.html">CLB Tin học</a>
-    <a href="clb-amnhac.html">CLB Âm nhạc</a>
-    <a href="clb-thethao.html">CLB Thể thao</a>
-    <a href="clb-sach.html">CLB Sách</a>
-</nav>
-
-<header>
-    <h1>Trường THPT Anh Sơn II</h1>
-    <p>Hoạt động câu lạc bộ ngoại khóa • Đời sống học đường</p>
-</header>
-
-<main>
-
-<div class="clb-grid">
-
-<!-- CLB 1 -->
-<div class="clb-item">
-   <img src="img/1.jpg" alt="CLB Tin học">
-    <div class="clb-text">
-        <a href="clb-tinhoc.html">
-            <h2>CLB Tin học – Công nghệ</h2>
-        </a>
-        <p>
-            Sân chơi công nghệ dành cho học sinh yêu thích lập trình,
-            thiết kế web và sáng tạo số.
-        </p>
-    </div>
-</div>
-
-<!-- CLB 2 -->
-<div class="clb-item">
-  <img src="img/2.jpg" alt="CLB Âm nhạc">
-    <div class="clb-text">
-        <a href="clb-amnhac.html">
-            <h2>CLB Âm nhạc</h2>
-        </a>
-        <p>
-            Nơi nuôi dưỡng đam mê ca hát, nhạc cụ và biểu diễn nghệ thuật
-            trong các sự kiện của trường.
-        </p>
-    </div>
-</div>
-
-<!-- CLB 3 -->
-<div class="clb-item">
- <img src="img/3.jpg" alt="CLB Thể Thao">
-    <div class="clb-text">
-        <a href="clb_thethao.html">
-            <h2>CLB Thể thao</h2>
-        </a>
-        <p>
-            Rèn luyện thể chất, tinh thần đồng đội thông qua các bộ môn
-            thể thao học đường.
-        </p>
-    </div>
-</div>
-
-<!-- CLB 4 -->
-<div class="clb-item">
-<img src="img/4.jpg" alt="CLB Sách & Kỹ năng – Lan tỏa văn hóa đọc">
-    <div class="clb-text">
-        <a href="clb-sach.html">
-            <h2>CLB & Kỹ năng – Lan tỏa văn hóa đọc</h2>
-        </a>
-        <p>
-            Tạo thói quen đọc sách và nâng cao kĩ năng qua sách.
-        </p>
-    </div>
-</div>
-
-</div>
-
-</main>
-</main>
-
-<!-- VIDEO GIỚI THIỆU -->
-<section class="youtube-section">
-  <h2>Video giới thiệu hoạt động ngoại khóa</h2>
-
-  <div class="youtube-wrapper">
-    <iframe 
-      src="https://youtu.be/ZuI2rb7WxW0?si=kPRb4gyxfEfYU_ee"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
-<footer>
-  ...
-</footer>
+    <main class="container">
+        <h2 style="text-align: center; margin-bottom: 2.5rem;">Các Câu Lạc Bộ Tiêu Biểu</h2>
+        <div class="club-grid">
+            <div class="club-card">
+                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=500&q=80" alt="Music" class="club-image">
+                <div class="club-info">
+                    <h3>CLB Âm Nhạc</h3>
+                    <p>Nơi khơi nguồn cảm hứng và tài năng âm nhạc của bạn.</p>
+                    <a href="clb-amnhac.html" class="btn">Chi tiết</a>
+                </div>
+            </div>
+            <div class="club-card">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500&q=80" alt="Tech" class="club-image">
+                <div class="club-info">
+                    <h3>CLB Tin Học</h3>
+                    <p>Sáng tạo phần mềm và nghiên cứu trí tuệ nhân tạo.</p>
+                    <a href="clb-tinhoc.html" class="btn">Chi tiết</a>
+                </div>
+            </div>
+            <div class="club-card">
+                <img src="https://images.unsplash.com/photo-1544648397-52e9df122482?auto=format&fit=crop&w=500&q=80" alt="Sports" class="club-image">
+                <div class="club-info">
+                    <h3>CLB Thể Thao</h3>
+                    <p>Rèn luyện sức khỏe và tinh thần đồng đội mỗi ngày.</p>
+                    <a href="clb_thethao.html" class="btn">Chi tiết</a>
+                </div>
+            </div>
+            <div class="club-card">
+                <img src="https://images.unsplash.com/photo-1453749024858-4bca89bd9edc?auto=format&fit=crop&w=500&q=80" alt="Art" class="club-image">
+                <div class="club-info">
+                    <h3>CLB Sách</h3>
+                    <p>Tô vẽ màu sắc cuộc sống qua những nét cọ điêu luyện.</p>
+                    <a href="clb-sach.html" class="btn">Chi tiết</a>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <footer>
-<div class="footer-box">
-    <div>
-        <h3>Sản phẩm bởi</h3>
-        <p>Nguyễn Văn Phước từ lớp 12A2</p>
-    </div>
-
-    <div>
-        <h3>Liên hệ</h3>
-        <p>Email: thptanhson2@edu.vn</p>
-        <p>Điện thoại: 038.xxx.xxxx</p>
-    </div>
-
-    <div>
-        <h3>Liên kết</h3>
-        <a href="#">Facebook</a><br>
-        <a href="#">Website trường</a>
-    </div>
-</div>
-
-<div class="footer-bottom">
-    © 2026 Trường THPT Anh Sơn II – Website CLB Ngoại Khóa
-</div>
-</footer>
-
-
+        <div class="footer-content">
+            <div>
+                <h3>Về chúng tôi</h3>
+                <p>Hệ thống quản lý các hoạt động ngoại khóa dành cho học sinh, sinh viên.</p>
+            </div>
+            <div>
+                <h3>Liên kết</h3>
+                <p>Chính sách bảo mật</p>
+                <p>Điều khoản sử dụng</p>
+            </div>
+            <div>
+                <h3>Liên hệ</h3>
+                <p>Email: contact@school.edu.vn</p>
+                <p>Hotline: 0123 456 789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 School Clubs. Design by Gemini.
+        </div>
+    </footer>
 </body>
 </html>
